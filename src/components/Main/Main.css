@@ -1,0 +1,18 @@
+.main {
+  width: 73%;
+
+}
+
+.logo {
+  width: 37%;
+  padding: 30px;
+  display: block;
+  margin: auto;
+}
+
+.favorites {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+}

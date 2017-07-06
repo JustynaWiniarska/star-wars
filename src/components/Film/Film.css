@@ -1,0 +1,28 @@
+.scrolling-text {
+  width: 27%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 30px;
+  top: -25px;
+
+  color: #feda4a;
+  font-size: 30px;
+  line-height: 1.6em;
+  letter-spacing: .17em;
+  text-align: center;
+  
+  transform-origin: 50% 100%;
+  animation: crawl 200s linear;
+}
+
+@keyframes crawl {
+	0% {
+    top: -100px;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+	100% {
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-1500px);
+  }
+}
