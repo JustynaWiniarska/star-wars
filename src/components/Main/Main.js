@@ -1,26 +1,29 @@
 import React, { Component } from 'react';
 import './Main.css'
 
-import People from '../People/People'
+import People from '../People/People';
+import Planets from '../Planets/Planets';
 
 export default class Main extends Component {
   constructor() {
     super()
     this.state={
       people:[],
+      planets: [],
     }
   }
   // console.log('state:', this.state.people)
 
   componentDidMount(){
-    this.fetchPeople()
+    this.fetchPeople(),
+    this.fetchPlanets()
   }
 
   fetchPeople() {
     fetch('http://swapi.co/api/people/')
     .then(res => res.json())
     .then(data => {
-      console.log('data', data.results)
+      // console.log('data', data.results)
 
     const homeworld = data.results.map(i =>
       fetch(i.homeworld)
@@ -76,9 +79,20 @@ export default class Main extends Component {
   }
 
 
+  fetchPlanets() {
+    fetch('http://swapi.co/api/planets/')
+    .then(res => res.json())
+    .then(data => {
+      console.log('planets:', data.results)
+      this.setState({planets: data.results})
+    })
+
+  }
+
+
 
   render() {
-    console.log('state', this.state.people)
+    console.log('planets state', this.state.planets)
     return (
       <div className='main'>
         <header>
@@ -98,6 +112,10 @@ export default class Main extends Component {
               <div className='loader'></div> :
           <People characters={this.state.people}/>
         }
+        </div>
+
+        <div>
+          <Planets planetList={this.state.planets}/>
         </div>
 
       </div>
