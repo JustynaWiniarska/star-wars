@@ -4,6 +4,8 @@ import './Main.css'
 import People from '../People/People';
 import Planets from '../Planets/Planets';
 
+import cleanPlanetData from '../Planets/cleanPlanetData'
+
 export default class Main extends Component {
   constructor() {
     super()
@@ -66,6 +68,7 @@ export default class Main extends Component {
 
     Promise.all(population)
       .then(callback => {
+        // console.log('callback pop:', callback)
         return callback.map((pop, i) => {
           return Object.assign(data.results[i], {population: pop})
         })
@@ -80,14 +83,47 @@ export default class Main extends Component {
 
 
   fetchPlanets() {
-    fetch('http://swapi.co/api/planets/')
-    .then(res => res.json())
-    .then(data => {
-      console.log('planets:', data.results)
-      this.setState({planets: data.results})
-    })
+    if(!this.state.planets.length){
+      fetch('http://swapi.co/api/planets/')
+      .then(res => res.json())
+      .then(data => {
 
+        const residentsArr = data.results.map(planet => {
+
+  // console.log('i.residents', i.residents)
+  // console.log('data.results[i]', data.results[i])
+          const residents = planet.residents.map(call =>
+    // console.log('call', call)
+          fetch(call)
+          .then(resp => resp.json())
+          .then(value => {
+  // console.log('value:', value.name)
+            return value.name
+            })
+          )
+
+    
+
+console.log('residents', residents)
+
+          return Promise.all(residents)
+          .then(values => {
+            console.log('values', values)
+
+            return Object.assign(planet, {residents: values})
+          })
+        })
+        return Promise.all(residentsArr)
+      })
+
+
+        .then(value => {
+          this.setState({planets: value})
+        })
+
+      }
   }
+
 
 
 

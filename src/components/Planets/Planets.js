@@ -2,9 +2,9 @@ import React from 'react';
 import Planet from './Planet';
 
 const Planets = ({ planetList }) => {
-
+console.log('planetList', planetList)
   let planets = planetList.map((planet, i) => {
-  
+
       return <Planet key={i} {...planet} />
   })
 

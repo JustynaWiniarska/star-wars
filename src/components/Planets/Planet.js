@@ -8,6 +8,7 @@ const Planet = ({ name, terrain, population, climate, residents }) => {
       <p>Terrain: {terrain}</p>
       <p>Population: {population}</p>
       <p>Climate: {climate}</p>
+      <p>Residents: {residents}</p>
     </div>
   )
 }
