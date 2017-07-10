@@ -59,6 +59,4 @@ const callPeople = (page, main) => {
   })
 }
 
-
-
 export default callPeople;
