@@ -1,7 +1,7 @@
 import React from 'react';
-import './Character.css'
+import './Person.css'
 
-const Character = ({name, homeworld, species, population}) => {
+const Person = ({name, homeworld, species, population}) => {
 
 
   return (
@@ -15,4 +15,4 @@ const Character = ({name, homeworld, species, population}) => {
   )
 }
 
-export default Character;
+export default Person;

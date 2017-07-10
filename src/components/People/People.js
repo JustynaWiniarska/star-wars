@@ -1,11 +1,11 @@
 import React from 'react';
-import Character from './Character';
+import Person from './Person';
 
-const People = ({characters}) => {
+const People = ({peopleList}) => {
 
-  let list = characters.map((obj, i) => {
+  const list = peopleList.map((obj, i) => {
 
-    return <Character key={i} {...obj} /> })
+    return <Person key={i} {...obj} /> })
 
   return (
     <div>
