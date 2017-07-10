@@ -6,7 +6,7 @@ const Vehicles = ({ vehicleList }) => {
   let vehicles = vehicleList.map((vehicle, i) => {
 //running through vehicleList 3 times
 
-  console.log('vehicle', vehicle)
+  // console.log('vehicle', vehicle)
     return <Vehicle key={i} {...vehicle} />
   })
 
