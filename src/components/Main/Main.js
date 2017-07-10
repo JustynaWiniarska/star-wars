@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { NavLink, Link, Route, BrowserRouter as Router} from 'react-router-dom';
 import './Main.css'
 
+import NavBar from '../NavBar/NavBar';
 import People from '../People/People';
 import Planets from '../Planets/Planets';
 import Vehicles from '../Vehicles/Vehicles';
@@ -36,39 +38,31 @@ export default class Main extends Component {
     // console.log('people state', this.state.people)
     // console.log('vehicle state', this.state.vehicles)
     return (
-      <div className='main'>
-        <header>
-          <img className='logo' src={require('./star-wars-logo.svg')} alt='Star Wars'/>
+      <Router>
+        <div className='main'>
+          <header>
+            <img className='logo' src={require('./star-wars-logo.svg')} alt='Star Wars'/>
 
-        <button className='favorites-btn'>View Favorites</button>
-        <hr />
-        </header>
+          <button className='favorites-btn'>View Favorites</button>
+          <hr />
+          </header>
 
-        <button>characters</button>
-        <button>planets</button>
-        <button>vehicles</button>
+        <NavBar />
 
-        <div>
-          {
-            this.state.people.length === 0 ?
-              <div className='loader'></div> :
+        <Route exact path='/people' render={({ match }) =>
           <People peopleList={this.state.people} />
-        }
-        </div>
+        }/>
 
-        <div>
-          {
-            this.state.people.length === 0 ?
-              <div className='loader'></div> :
-            <Planets planetList={this.state.planets} />
-          }
-        </div>
+        <Route exact path='/planets' render={({ match }) =>
+          <Planets planetList={this.state.planets} />
+        }/>
 
-        <div>
+        <Route exact path='/vehicles' render={({ match }) =>
           <Vehicles vehicleList={this.state.vehicles} />
-        </div>
+        }/>
 
-      </div>
+        </div>
+      </Router>
     )
   }
 }
