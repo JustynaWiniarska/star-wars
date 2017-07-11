@@ -30,3 +30,52 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+
+/*CARD*/
+
+.card {
+  border: 1px solid  #ffc500;
+  width: 300px;
+  min-height: 220px;
+  margin: 20px;
+}
+
+h3 {
+  padding-left: 30px;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 10;
+  font-size: 25px
+}
+
+.p-container {
+
+}
+.card p {
+  font-size: 18px;
+  padding: 0 20px;
+}
+
+/*FAVORITES*/
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fav-btn {
+  background: black;
+  border: .5px solid #ffc500;
+  display: block;
+  width: 45px;
+  height: 45px;
+}
+
+.fav-btn:hover {
+  background-color: #7dacad;
+}
+
+.fav-btn:active {
+  background-color: #7dacad;
+}

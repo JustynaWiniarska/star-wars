@@ -4,7 +4,12 @@ const Planet = ({ name, terrain, population, climate, residents }) => {
 
   return (
     <div className='card'>
-      <h3>{name}</h3>
+      <div className='card-header'>
+        <h3>{name}</h3>
+        <button className='fav-btn'>
+        <img src={require('../Main/star.png')} className='fav-star' alt='favorite' />
+        </button>
+      </div>
       <p>Terrain: {terrain}</p>
       <p>Population: {population}</p>
       <p>Climate: {climate}</p>

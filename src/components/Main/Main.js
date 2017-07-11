@@ -3,6 +3,7 @@ import { Route, BrowserRouter as Router} from 'react-router-dom';
 import './Main.css'
 
 import NavBar from '../NavBar/NavBar';
+import Display from '../Display/Display';
 import People from '../People/People';
 import Planets from '../Planets/Planets';
 import Vehicles from '../Vehicles/Vehicles';
@@ -22,13 +23,11 @@ export default class Main extends Component {
     }
   }
 
-  componentDidMount(){
+  componentWillMount(){
     callPeople('people', this)
     callPlanets('planets', this)
     callVehicles('vehicles', this)
   }
-
-
 
   render() {
 
@@ -48,6 +47,8 @@ export default class Main extends Component {
           </header>
 
         <NavBar />
+
+        <Route exact path='/' component={Display} />
 
         <Route exact path='/people' render={({ match }) =>
           <People peopleList={this.state.people} />

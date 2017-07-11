@@ -1,0 +1,9 @@
+.navigation {
+  display: block;
+  margin: auto;
+}
+
+.link {
+  color: #ffc500;
+  padding: 0 30px
+}

@@ -1,6 +1,6 @@
 .app {
   display: flex;
-  height: 100%;
+  min-height: 100%;
   background-image: url('stars.jpg');
 }
 
@@ -8,19 +8,12 @@ hr {
   border: 0;
   width: 1px;
   background-image: -webkit-linear-gradient(left, #f0f0f0, #feda4a, #f0f0f0);
-background-image: -moz-linear-gradient(left, #f0f0f0, #feda4a, #f0f0f0);
-background-image: -ms-linear-gradient(left, #f0f0f0, #feda4a, #f0f0f0);
-background-image: -o-linear-gradient(left, #f0f0f0, #feda4a, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #feda4a, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #feda4a, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #feda4a, #f0f0f0);
 }
 
 p, h2, h3 {
   color: #ffc500;
   text-align: center
-}
-
-.card {
-  border: 1px solid  #ffc500;
-  width: 240px;
-  margin: 20px;
-  padding: 0 15px 15px 15px;
 }
