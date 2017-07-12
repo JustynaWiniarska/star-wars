@@ -2,7 +2,7 @@ import React from 'react';
 
 const Person = ({ name, homeworld, species, population, handleFavorites }) => {
 
-  let personData = {
+  const personData = {
     name: name,
     homeworld: homeworld,
     species, species,

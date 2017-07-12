@@ -36,22 +36,20 @@ export default class Main extends Component {
     // alert('connected')
 
     const favoritesArray = this.state.favorites
-
     const newArray = favoritesArray.map(obj => {
-      // console.log('obj', obj.name)
+      console.log('obj', obj.name)
       return obj.name
     })
-
     const place = newArray.indexOf(favorite.name)
 
     if(place === -1) {
       favoritesArray.push(favorite)
-      // console.log('place:', place)
+      console.log('place:', place)
     }
 
     else if(place >= 0) {
       favoritesArray.splice(place, 1)
-      // console.log('place:', place)
+      console.log('place:', place)
     }
 
     this.setState({
@@ -59,9 +57,9 @@ export default class Main extends Component {
       favoritesCount: favoritesArray.length
     })
 
-    // console.log('favoritesCount', this.state.favoritesCount)
-    // console.log('favoritesArray', favoritesArray)
-    // console.log('favorite name:', favorite)
+    console.log('favoritesCount', this.state.favoritesCount)
+    console.log('favoritesArray', favoritesArray)
+    console.log('favorite name:', favorite.name)
 
   }
 
@@ -94,11 +92,15 @@ export default class Main extends Component {
         }/>
 
         <Route exact path='/planets' render={({ match }) =>
-          <Planets planetList={this.state.planets} />
+          <Planets  planetList={this.state.planets}
+          handleFavorites={this.saveFavorite.bind(this)}
+         />
         }/>
 
         <Route exact path='/vehicles' render={({ match }) =>
-          <Vehicles vehicleList={this.state.vehicles} />
+          <Vehicles vehicleList={this.state.vehicles}
+          handleFavorites={this.saveFavorite.bind(this)}
+        />
         }/>
 
         </div>
