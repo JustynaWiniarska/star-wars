@@ -2,7 +2,7 @@ import React from 'react';
 
 const DisplayFavorites = () => {
 
-
+  
   // if(!favorites) {
   //   return (
   //       <p>There are no selected favorites.</p>

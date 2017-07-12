@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Display = () => {
+const LandingPage = () => {
 
   return (
     <div>
@@ -9,4 +9,4 @@ const Display = () => {
   )
 }
 
-export default Display;
+export default LandingPage;

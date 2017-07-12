@@ -3,7 +3,7 @@ import { Link, Route, BrowserRouter as Router} from 'react-router-dom';
 import './Main.css'
 
 import NavBar from '../NavBar/NavBar';
-import Display from '../Display/Display';
+import LandingPage from '../LandingPage/LandingPage';
 import People from '../People/People';
 import Planets from '../Planets/Planets';
 import Vehicles from '../Vehicles/Vehicles';
@@ -92,7 +92,7 @@ export default class Main extends Component {
 
         <NavBar />
 
-        <Route exact path='/' component={Display} />
+        <Route exact path='/' component={LandingPage} />
 
         <Route exact path='/people' render={({ match }) =>
           <People peopleList={this.state.people}
