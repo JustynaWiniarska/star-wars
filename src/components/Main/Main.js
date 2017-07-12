@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, BrowserRouter as Router} from 'react-router-dom';
+import { Link, Route, BrowserRouter as Router} from 'react-router-dom';
 import './Main.css'
 
 import NavBar from '../NavBar/NavBar';
@@ -7,6 +7,7 @@ import Display from '../Display/Display';
 import People from '../People/People';
 import Planets from '../Planets/Planets';
 import Vehicles from '../Vehicles/Vehicles';
+import DisplayFavorites from '../Favorites/DisplayFavorites';
 
 import callPeople from '../helperFunctions/callPeople';
 import callPlanets from '../helperFunctions/callPlanets';
@@ -21,7 +22,8 @@ export default class Main extends Component {
       planets: [],
       vehicles: [],
       favorites: [],
-      favoritesCount: 0
+      favoritesCount: 0,
+      // showFavorites: false
     }
   }
 
@@ -37,19 +39,19 @@ export default class Main extends Component {
 
     const favoritesArray = this.state.favorites
     const newArray = favoritesArray.map(obj => {
-      console.log('obj', obj.name)
+      // console.log('obj', obj.name)
       return obj.name
     })
     const place = newArray.indexOf(favorite.name)
 
     if(place === -1) {
       favoritesArray.push(favorite)
-      console.log('place:', place)
+      // console.log('place:', place)
     }
 
     else if(place >= 0) {
       favoritesArray.splice(place, 1)
-      console.log('place:', place)
+      // console.log('place:', place)
     }
 
     this.setState({
@@ -57,17 +59,18 @@ export default class Main extends Component {
       favoritesCount: favoritesArray.length
     })
 
-    console.log('favoritesCount', this.state.favoritesCount)
+    // console.log('favoritesCount', this.state.favoritesCount)
     console.log('favoritesArray', favoritesArray)
     console.log('favorite name:', favorite.name)
 
   }
 
+  // displayFavorites() {
+  //   this.setState({showFavorites: true})
+  // }
 
   render() {
-
 //rendering 3 times!!
-
     // console.log('planets state', this.state.planets)
     // console.log('people state', this.state.people)
     // console.log('vehicle state', this.state.vehicles)
@@ -77,8 +80,14 @@ export default class Main extends Component {
           <header>
             <img className='logo' src={require('./star-wars-logo.svg')} alt='Star Wars'/>
 
-          <button className='favorites-btn'>View Favorites: <span className='favorites-count'>{this.state.favoritesCount}</span></button>
-          <hr />
+            <Link to='/favorites'>
+              <button className='favorites-btn'>
+                View Favorites:
+                <span className='favorites-count'>{this.state.favoritesCount}</span>
+              </button>
+            </Link>
+
+            <hr />
           </header>
 
         <NavBar />
@@ -101,6 +110,10 @@ export default class Main extends Component {
           <Vehicles vehicleList={this.state.vehicles}
           handleFavorites={this.saveFavorite.bind(this)}
         />
+        }/>
+
+        <Route exact path='/favorites' render={({ match }) =>
+          <DisplayFavorites favorites={this.state.favorites} />
         }/>
 
         </div>
