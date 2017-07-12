@@ -19,15 +19,52 @@ export default class Main extends Component {
     this.state={
       people:[],
       planets: [],
-      vehicles: []
+      vehicles: [],
+      favorites: [],
+      favoritesCount: 0
     }
   }
 
-  componentWillMount(){
+  componentDidMount(){
     callPeople('people', this)
     callPlanets('planets', this)
     callVehicles('vehicles', this)
   }
+
+
+  saveFavorite(favorite) {
+    // alert('connected')
+
+    const favoritesArray = this.state.favorites
+
+    const newArray = favoritesArray.map(obj => {
+      // console.log('obj', obj.name)
+      return obj.name
+    })
+
+    const place = newArray.indexOf(favorite.name)
+
+    if(place === -1) {
+      favoritesArray.push(favorite)
+      // console.log('place:', place)
+    }
+
+    else if(place >= 0) {
+      favoritesArray.splice(place, 1)
+      // console.log('place:', place)
+    }
+
+    this.setState({
+      favorites: favoritesArray,
+      favoritesCount: favoritesArray.length
+    })
+
+    // console.log('favoritesCount', this.state.favoritesCount)
+    // console.log('favoritesArray', favoritesArray)
+    // console.log('favorite name:', favorite)
+
+  }
+
 
   render() {
 
@@ -42,7 +79,7 @@ export default class Main extends Component {
           <header>
             <img className='logo' src={require('./star-wars-logo.svg')} alt='Star Wars'/>
 
-          <button className='favorites-btn'>View Favorites</button>
+          <button className='favorites-btn'>View Favorites: <span className='favorites-count'>{this.state.favoritesCount}</span></button>
           <hr />
           </header>
 
@@ -51,7 +88,9 @@ export default class Main extends Component {
         <Route exact path='/' component={Display} />
 
         <Route exact path='/people' render={({ match }) =>
-          <People peopleList={this.state.people} />
+          <People peopleList={this.state.people}
+            handleFavorites={this.saveFavorite.bind(this)}
+          />
         }/>
 
         <Route exact path='/planets' render={({ match }) =>

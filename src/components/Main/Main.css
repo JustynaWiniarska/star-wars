@@ -17,6 +17,12 @@
   margin: 20px;
 }
 
+/*.favorites-count {
+  width: 20px;
+  height: 12px;
+  background-color: gray;
+}*/
+
   .loader {
     border: 5px solid #ffc500;
     border-top: 6px solid #997600;

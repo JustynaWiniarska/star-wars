@@ -1,13 +1,21 @@
 import React from 'react';
 
-const Person = ({name, homeworld, species, population}) => {
+const Person = ({ name, homeworld, species, population, handleFavorites }) => {
 
+  let personData = {
+    name: name,
+    homeworld: homeworld,
+    species, species,
+    population: population
+  }
 
   return (
     <div className='card'>
       <div className='card-header'>
         <h3>{name}</h3>
-        <button className='fav-btn'>
+        <button className='fav-btn'
+          onClick={() => handleFavorites(personData)}
+        >
         <img src={require('../Main/star.png')} className='fav-star' alt='favorite' />
         </button>
       </div>

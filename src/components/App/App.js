@@ -14,7 +14,7 @@ class App extends Component {
     }
   }
 
-  componentDidMount(){
+  componentWillMount(){
     fetch('http://swapi.co/api/films/1/')
     .then(res => res.json())
     .then(movie => {
