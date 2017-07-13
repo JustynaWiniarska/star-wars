@@ -1,10 +1,11 @@
 import React from 'react';
+import './LandingPage.css';
 
 const LandingPage = () => {
 
   return (
     <div>
-      <p>Select a Category</p>
+      <p className='landing-page'>Select a Category</p>
     </div>
   )
 }

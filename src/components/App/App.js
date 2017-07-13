@@ -29,7 +29,6 @@ class App extends Component {
       <div className="app">
 
         <Film film={this.state.film}/>
-        <hr/>
 
         <Main />
 

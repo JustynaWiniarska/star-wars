@@ -13,7 +13,9 @@ const Vehicles = ({ vehicleList, handleFavorites }) => {
   return (
     <div>
       <h2>vehicles</h2>
-      {vehicles}
+      <div className='card-grid'>
+        {vehicles}
+      </div>
     </div>
   )
 }

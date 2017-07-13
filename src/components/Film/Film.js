@@ -4,7 +4,7 @@ import './Film.css'
 const Film = ({film}) => {
 
   return (
-    <div className='scrolling-text'>
+    <div className='film'>
       <div className='scrolling-text-container'>
         <p>{film.crawl}</p>
         <p>{film.title}</p>

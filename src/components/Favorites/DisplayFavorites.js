@@ -2,8 +2,6 @@ import React from 'react';
 
 const DisplayFavorites = ({ favorites, handleFavorites }) => {
 
-console.log('favorites', favorites)
-
   if(favorites) {
     const FavoriteCards = favorites.map((card, index) => {
 
@@ -64,7 +62,7 @@ console.log('favorites', favorites)
       }
 
     // vehicle cards
-      else if (card.vehicle_class) {
+      else if (card.model) {
 
         const vehicleData = {
           name: card.name,
@@ -94,22 +92,24 @@ console.log('favorites', favorites)
     })
 
     return (
-      <div className='favorites'>
-          <h2>Favorites</h2>
+      <div>
+        <h2>Favorites</h2>
+        <div className='favorites card-grid'>
           {FavoriteCards}
+        </div>
       </div>
     )
   }
 
-  // if (!favorites) {
-  //   return (
-  //     <div className='favorites'>
-  //         <h2>Favorites</h2>
-  //         <p>There are no favorites to display.</p>
-  //
-  //     </div>
-  //   )
-  // }
+  if (!favorites) {
+    return (
+      <div className='favorites'>
+          <h2>Favorites</h2>
+          <p>There are no favorites to display.</p>
+
+      </div>
+    )
+  }
 
 }
 

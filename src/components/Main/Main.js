@@ -23,7 +23,6 @@ export default class Main extends Component {
       vehicles: [],
       favorites: [],
       favoritesCount: 0,
-      // showFavorites: false
     }
   }
 
@@ -78,7 +77,7 @@ export default class Main extends Component {
       <Router>
         <div className='main'>
           <header>
-            <img className='logo' src={require('./star-wars-logo.svg')} alt='Star Wars'/>
+            <img className='logo' src={require('./star-wars-logo-dark-gray.svg')} alt='Star Wars'/>
 
             <Link to='/favorites'>
               <button className='favorites-btn'>
@@ -87,36 +86,35 @@ export default class Main extends Component {
               </button>
             </Link>
 
-            <hr />
+            <NavBar />
+
           </header>
 
-        <NavBar />
+          <Route exact path='/' component={LandingPage} />
 
-        <Route exact path='/' component={LandingPage} />
+          <Route exact path='/people' render={({ match }) =>
+            <People peopleList={this.state.people}
+              handleFavorites={this.saveFavorite.bind(this)}
+            />
+          }/>
 
-        <Route exact path='/people' render={({ match }) =>
-          <People peopleList={this.state.people}
+          <Route exact path='/planets' render={({ match }) =>
+            <Planets  planetList={this.state.planets}
             handleFavorites={this.saveFavorite.bind(this)}
-          />
-        }/>
+            />
+          }/>
 
-        <Route exact path='/planets' render={({ match }) =>
-          <Planets  planetList={this.state.planets}
-          handleFavorites={this.saveFavorite.bind(this)}
-          />
-        }/>
+          <Route exact path='/vehicles' render={({ match }) =>
+            <Vehicles vehicleList={this.state.vehicles}
+            handleFavorites={this.saveFavorite.bind(this)}
+            />
+          }/>
 
-        <Route exact path='/vehicles' render={({ match }) =>
-          <Vehicles vehicleList={this.state.vehicles}
-          handleFavorites={this.saveFavorite.bind(this)}
-          />
-        }/>
-
-        <Route exact path='/favorites' render={({ match }) =>
-          <DisplayFavorites favorites={this.state.favorites}
-          handleFavorites={this.saveFavorite.bind(this)}
-          />
-        }/>
+          <Route exact path='/favorites' render={({ match }) =>
+            <DisplayFavorites favorites={this.state.favorites}
+            handleFavorites={this.saveFavorite.bind(this)}
+            />
+          }/>
 
         </div>
       </Router>

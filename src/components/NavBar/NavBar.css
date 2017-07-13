@@ -1,9 +1,26 @@
 .navigation {
-  display: block;
-  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 17px;
 }
 
 .link {
-  color: #ffc500;
-  padding: 0 30px
+  font-family: 'Play', sans-serif;
+  letter-spacing: .2em;
+  font-size: 18px;
+  text-decoration: none;
+  color: #45a2a5;
+  margin: 0 30px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 0;
+
+  border: 1.5px solid #358a8d;
+  background-color: rgba(53, 53, 53, .7);
+  width: 180px;
+  height: 35px;
+}
+
+.active {
+  background-color: rgba(153, 153, 153, .6);
 }

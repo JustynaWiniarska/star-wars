@@ -1,13 +1,23 @@
 .main {
-  width: 73%;
+  width: 79%;
+  border-left: .8px dotted #358a8d;
+  padding-left: 25px;
+}
 
+header {
+  border-bottom: .8px dotted #358a8d;
+  padding-bottom: 30px;
+  margin: auto;
+  width: 90%;
 }
 
 .logo {
   width: 37%;
   padding: 30px;
+  padding-right: 50px;
   display: block;
   margin: auto;
+  color: #dddddd;
 }
 
 .favorites-btn {
@@ -15,13 +25,34 @@
   top: 0;
   right: 0;
   margin: 20px;
+  border: 1.5px solid #358a8d;
+  background-color: rgba(53, 53, 53, .7);
+  width: 170px;
+  height: 32px;
+  font-family: 'Play', sans-serif;
+  font-weight: bold;
+  letter-spacing: .1em;
+  font-size: 14px;
+  text-decoration: none;
+  color: #999;
+  padding-left: 12px;
 }
 
-/*.favorites-count {
-  width: 20px;
-  height: 12px;
-  background-color: gray;
-}*/
+.favorites-btn:hover {
+  background-color: rgba(153, 153, 153, .6);
+}
+
+.favorites-btn:focus{
+  outline: none;
+  background-color: rgba(153, 153, 153, .6)
+}
+
+.favorites-count {
+  padding: 0 10px;
+  color: #45a2a5;
+  font-size: 16px
+}
+
 
   .loader {
     border: 5px solid #ffc500;
@@ -37,22 +68,36 @@
     100% { transform: rotate(360deg); }
 }
 
+/*CARD GRID*/
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-/*CARD*/
+/*cards display*/
+h2 {
+  font-size: 32px;
+  letter-spacing: .4em;
+  margin: 40px 0 25px 0;
+  color: #999;
+  text-align: center
+}
 
 .card {
-  border: 1px solid  #ffc500;
-  width: 300px;
-  min-height: 220px;
+  letter-spacing: .1em;
+  background-color: rgba(53, 53, 53, .7);
+  border: 1.5px solid #358a8d;
+  width: 290px;
+  min-height: 180px;
   margin: 20px;
 }
 
 h3 {
-  padding-left: 30px;
+  padding-left: 20px;
   margin: auto;
-  padding-top: 20px;
   padding-bottom: 10;
-  font-size: 25px
+  font-size: 20px;
+  color: #45a2a5;
 }
 
 .p-container {
@@ -61,6 +106,7 @@ h3 {
 .card p {
   font-size: 18px;
   padding: 0 20px;
+  color: #dddddd;
 }
 
 /*FAVORITES*/
@@ -68,14 +114,16 @@ h3 {
 .card-header {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #358a8d;
 }
 
 .fav-btn {
-  background: black;
-  border: .5px solid #ffc500;
+  background-color: rgba(53, 53, 53, .1);
+  border: none;
+  border-left: .5px solid #358a8d;
   display: block;
-  width: 45px;
-  height: 45px;
+  width: 46px;
+  height: 46px;
 }
 
 .fav-btn:hover {

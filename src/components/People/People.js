@@ -10,7 +10,9 @@ const People = ({ peopleList, handleFavorites }) => {
   return (
     <div>
       <h2>characters</h2>
-      {list}
+      <div className='card-grid'>
+        {list}
+      </div>
     </div>
   )
 }
