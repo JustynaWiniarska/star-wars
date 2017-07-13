@@ -16,7 +16,7 @@
   transform-origin: 50% 100%;
   animation: scroll 500s linear;
 }
-
+/*
 @keyframes scroll {
 	0% {
     top: -100px;
@@ -26,7 +26,7 @@
     top: -6000px;
     transform: rotateX(25deg) translateZ(-1500px);
   }
-}
+}*/
 
 .scrolling-text-container {
   transform: rotateX(30deg);

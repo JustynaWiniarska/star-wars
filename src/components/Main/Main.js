@@ -63,10 +63,7 @@ export default class Main extends Component {
     console.log('favorite name:', favorite.name)
 
   }
-
-  // displayFavorites() {
-  //   this.setState({showFavorites: true})
-  // }
+  
 
   render() {
 //rendering 3 times!!

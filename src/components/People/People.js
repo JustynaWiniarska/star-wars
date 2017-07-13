@@ -5,7 +5,19 @@ const People = ({ peopleList, handleFavorites }) => {
 
   const list = peopleList.map((obj, i) => {
 
-    return <Person key={i} id={obj.created} {...obj} handleFavorites={handleFavorites} /> })
+    return <Person key={i} id={obj.created} {...obj} handleFavorites={handleFavorites} />
+  })
+
+  if(!peopleList.length) {
+    return (
+      <div>
+        <h2>characters</h2>
+        <div className='card-grid'>
+          <p className='loading'>Loading......</p>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div>

@@ -6,9 +6,19 @@ const Vehicles = ({ vehicleList, handleFavorites }) => {
   let vehicles = vehicleList.map((vehicle, i) => {
 //running through vehicleList 3 times
 
-  // console.log('vehicle', vehicle)
     return <Vehicle key={i} {...vehicle} handleFavorites={handleFavorites} />
   })
+
+  if(!vehicleList.length) {
+    return (
+      <div>
+        <h2>vehicles</h2>
+        <div className='card-grid'>
+          <p className='loading'>Loading......</p>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div>
