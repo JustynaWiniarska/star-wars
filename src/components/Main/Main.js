@@ -103,17 +103,19 @@ export default class Main extends Component {
         <Route exact path='/planets' render={({ match }) =>
           <Planets  planetList={this.state.planets}
           handleFavorites={this.saveFavorite.bind(this)}
-         />
+          />
         }/>
 
         <Route exact path='/vehicles' render={({ match }) =>
           <Vehicles vehicleList={this.state.vehicles}
           handleFavorites={this.saveFavorite.bind(this)}
-        />
+          />
         }/>
 
         <Route exact path='/favorites' render={({ match }) =>
-          <DisplayFavorites favorites={this.state.favorites} />
+          <DisplayFavorites favorites={this.state.favorites}
+          handleFavorites={this.saveFavorite.bind(this)}
+          />
         }/>
 
         </div>

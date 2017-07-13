@@ -5,7 +5,7 @@ const Person = ({ name, homeworld, species, population, handleFavorites }) => {
   const personData = {
     name: name,
     homeworld: homeworld,
-    species, species,
+    species: species,
     population: population
   }
 

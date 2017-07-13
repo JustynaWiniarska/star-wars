@@ -5,7 +5,7 @@ const People = ({ peopleList, handleFavorites }) => {
 
   const list = peopleList.map((obj, i) => {
 
-    return <Person key={i} id={obj.created} {...obj}  handleFavorites={handleFavorites} /> })
+    return <Person key={i} id={obj.created} {...obj} handleFavorites={handleFavorites} /> })
 
   return (
     <div>
