@@ -1,3 +1,8 @@
+.favorites-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .favorited {
   background-color: rgba(85, 168, 170, .2);
 }

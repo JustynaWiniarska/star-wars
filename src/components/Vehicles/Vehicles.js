@@ -1,12 +1,12 @@
 import React from 'react';
 import Vehicle from './Vehicle'
 
-const Vehicles = ({ vehicleList, handleFavorites }) => {
+const Vehicles = ({ vehicleList, handleFavorites, favorites }) => {
 
   let vehicles = vehicleList.map((vehicle, i) => {
 //running through vehicleList 3 times
 
-    return <Vehicle key={i} {...vehicle} handleFavorites={handleFavorites} />
+    return <Vehicle key={i} {...vehicle} handleFavorites={handleFavorites} favorites={favorites} />
   })
 
   if(!vehicleList.length) {

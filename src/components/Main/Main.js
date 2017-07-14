@@ -59,8 +59,8 @@ export default class Main extends Component {
     })
 
     // console.log('favoritesCount', this.state.favoritesCount)
-    console.log('favoritesArray', favoritesArray)
-    console.log('favorite name:', favorite.name)
+    // console.log('favoritesArray', favoritesArray)
+    // console.log('favorite name:', favorite.name)
 
   }
 
@@ -99,12 +99,14 @@ export default class Main extends Component {
           <Route exact path='/planets' render={({ match }) =>
             <Planets  planetList={this.state.planets}
             handleFavorites={this.saveFavorite.bind(this)}
+            favorites={this.state.favorites}
             />
           }/>
 
           <Route exact path='/vehicles' render={({ match }) =>
             <Vehicles vehicleList={this.state.vehicles}
             handleFavorites={this.saveFavorite.bind(this)}
+            favorites={this.state.favorites}
             />
           }/>
 

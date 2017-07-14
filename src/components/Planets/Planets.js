@@ -1,11 +1,11 @@
 import React from 'react';
 import Planet from './Planet';
 
-const Planets = ({ planetList, handleFavorites }) => {
+const Planets = ({ planetList, handleFavorites, favorites }) => {
 
   const planets = planetList.map((planet, i) => {
 
-    return <Planet key={i} {...planet} handleFavorites={handleFavorites} />
+    return <Planet key={i} {...planet} handleFavorites={handleFavorites} favorites={favorites} />
   })
 
   if(!planetList.length) {

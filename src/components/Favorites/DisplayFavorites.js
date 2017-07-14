@@ -97,7 +97,6 @@ const DisplayFavorites = ({ favorites, handleFavorites }) => {
         <div className='favorites'>
             <h2>Favorites</h2>
             <p>There are no favorites to display.</p>
-
         </div>
       )
     }
@@ -105,7 +104,7 @@ const DisplayFavorites = ({ favorites, handleFavorites }) => {
     return (
       <div>
         <h2>Favorites</h2>
-        <div className='card-grid'>
+        <div className='favorites-grid'>
           {FavoriteCards}
         </div>
       </div>
