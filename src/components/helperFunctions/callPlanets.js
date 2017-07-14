@@ -32,7 +32,7 @@ const callPlanets = (page, main) => {
   .then(value =>
     main.setState({planets: value})
   )
-
+  .catch(error => console.log('error fetching planets:', error))
 }
 
 export default callPlanets;

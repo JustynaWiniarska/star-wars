@@ -3,7 +3,6 @@ const callPeople = (page, main) => {
   fetch(`http://swapi.co/api/${page}/`)
   .then(res => res.json())
   .then(data => {
-    // console.log('data', data.results)
 
   const homeworld = data.results.map(i =>
     fetch(i.homeworld)
@@ -17,7 +16,6 @@ const callPeople = (page, main) => {
     fetch(i.species)
     .then(res => res.json())
     .then(spec => {
-      // console.log('home:', spec)
       return spec.name
     })
   )
@@ -56,6 +54,7 @@ const callPeople = (page, main) => {
       main.setState({people: value})
     })
 
+    .catch(error => console.log('error fetching people:', error))
   })
 }
 

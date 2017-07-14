@@ -61,7 +61,6 @@ export default class Main extends Component {
     // console.log('favoritesCount', this.state.favoritesCount)
     // console.log('favoritesArray', favoritesArray)
     // console.log('favorite name:', favorite.name)
-
   }
 
 
@@ -74,7 +73,7 @@ export default class Main extends Component {
       <Router>
         <div className='main'>
           <header>
-            <img className='logo' src={require('./star-wars-logo-dark-gray.svg')} alt='Star Wars'/>
+            <img className='logo' src={require('./star-wars-logo.svg')} alt='Star Wars'/>
 
             <Link to='/favorites'>
               <button className='favorites-btn'>

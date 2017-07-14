@@ -20,8 +20,8 @@ class App extends Component {
     .then(movie => {
       // console.log(this.state.film)
       this.setState({film: cleanFilmData(movie)})
-
     })
+    .catch(error => console.log('error fetching film:', error))
   }
 
   render() {
