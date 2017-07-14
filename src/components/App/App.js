@@ -27,11 +27,8 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-
         <Film film={this.state.film}/>
-
         <Main />
-
       </div>
     );
   }
