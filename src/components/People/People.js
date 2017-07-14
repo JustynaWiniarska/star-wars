@@ -1,11 +1,10 @@
 import React from 'react';
 import Person from './Person';
 
-const People = ({ peopleList, handleFavorites }) => {
-
+const People = ({ peopleList, handleFavorites, favorites }) => {
   const list = peopleList.map((obj, i) => {
 
-    return <Person key={i} id={obj.created} {...obj} handleFavorites={handleFavorites} />
+    return <Person key={i} id={obj.created} {...obj} handleFavorites={handleFavorites} favorites={favorites}/>
   })
 
   if(!peopleList.length) {

@@ -1,4 +1,5 @@
 import React from 'react';
+import './DisplayFavorites.css';
 
 const DisplayFavorites = ({ favorites, handleFavorites }) => {
 
@@ -16,7 +17,7 @@ const DisplayFavorites = ({ favorites, handleFavorites }) => {
         }
 
         return (
-          <div className='card' key={index}>
+          <div className='card favorited' key={index}>
             <div className='card-header'>
               <h3>{card.name}</h3>
               <button className='fav-btn'
@@ -44,7 +45,7 @@ const DisplayFavorites = ({ favorites, handleFavorites }) => {
         }
 
         return (
-          <div className='card' key={index}>
+          <div className='card favorited' key={index}>
             <div className='card-header'>
               <h3>{card.name}</h3>
               <button className='fav-btn'
@@ -72,7 +73,7 @@ const DisplayFavorites = ({ favorites, handleFavorites }) => {
         }
 
         return (
-          <div className='card' key={index}>
+          <div className='card favorited' key={index}>
             <div className='card-header'>
               <h3>{card.name}</h3>
               <button className='fav-btn'
@@ -91,26 +92,25 @@ const DisplayFavorites = ({ favorites, handleFavorites }) => {
       }
     })
 
+    if (!favorites) {
+      return (
+        <div className='favorites'>
+            <h2>Favorites</h2>
+            <p>There are no favorites to display.</p>
+
+        </div>
+      )
+    }
+
     return (
       <div>
         <h2>Favorites</h2>
-        <div className='favorites card-grid'>
+        <div className='card-grid'>
           {FavoriteCards}
         </div>
       </div>
     )
   }
-
-  if (!favorites) {
-    return (
-      <div className='favorites'>
-          <h2>Favorites</h2>
-          <p>There are no favorites to display.</p>
-
-      </div>
-    )
-  }
-
 }
 
 export default DisplayFavorites;

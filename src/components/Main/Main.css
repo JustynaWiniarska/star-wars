@@ -40,11 +40,13 @@ header {
 
 .favorites-btn:hover {
   background-color: rgba(153, 153, 153, .6);
+  color: #252525;
 }
 
 .favorites-btn:focus{
   outline: none;
-  background-color: rgba(153, 153, 153, .6)
+  background-color: rgba(153, 153, 153, .6);
+  color: #252525;
 }
 
 .favorites-count {
@@ -53,6 +55,7 @@ header {
   font-size: 16px
 }
 
+/*"Loading.... message"*/
 .loading {
   color: #999;
   margin: auto;
@@ -93,9 +96,6 @@ h3 {
   color: #45a2a5;
 }
 
-.p-container {
-
-}
 .card p {
   font-size: 18px;
   padding: 0 20px;
@@ -103,7 +103,6 @@ h3 {
 }
 
 /*FAVORITES*/
-
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -120,9 +119,15 @@ h3 {
 }
 
 .fav-btn:hover {
-  background-color: #7dacad;
+  background-color: rgba(85, 168, 170, .2);
+  outline: none;
 }
 
 .fav-btn:active {
-  background-color: #7dacad;
+  background-color: rgba(85, 168, 170, .2);
+  outline: none;
+}
+
+.fav-btn:focus {
+  outline: none
 }

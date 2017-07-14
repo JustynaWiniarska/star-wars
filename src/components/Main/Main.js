@@ -63,7 +63,7 @@ export default class Main extends Component {
     console.log('favorite name:', favorite.name)
 
   }
-  
+
 
   render() {
 //rendering 3 times!!
@@ -92,6 +92,7 @@ export default class Main extends Component {
           <Route exact path='/people' render={({ match }) =>
             <People peopleList={this.state.people}
               handleFavorites={this.saveFavorite.bind(this)}
+              favorites={this.state.favorites}
             />
           }/>
 
