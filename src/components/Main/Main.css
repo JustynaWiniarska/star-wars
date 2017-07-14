@@ -142,9 +142,36 @@ h3 {
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 780px) {
 
   .main {
     padding: 10px;
+  }
+
+  .card-grid {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+
+  .card {
+    margin: 20px 5px;
+  }
+
+  .favorites-btn{
+    margin: 8px;
+  }
+
+  /*.logo {
+    width: 50%;
+  }*/
+}
+
+@media screen and (max-width: 625px) {
+
+  .logo {
+    padding-top: 60px;
+    width: 50%;
   }
 }
