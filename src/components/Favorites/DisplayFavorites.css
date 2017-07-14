@@ -1,7 +1,6 @@
 .favorites-grid {
   display: flex;
   flex-wrap: wrap;
-  min-height: 600px;
 }
 
 .favorited {

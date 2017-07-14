@@ -148,20 +148,23 @@ h3 {
     padding: 10px;
   }
 
-  .card-grid {
-    margin-right: 20px;
+  .card {
+    margin: 20px 5px;
   }
+  /*.card-grid {
+    margin-right: 20px;
+  }*/
 }
 
 @media screen and (max-width: 690px) {
 
-  .card {
+  /*.card {
     margin: 20px 5px;
-  }
+  }*/
 
-  .favorites-btn{
+  /*.favorites-btn{
     margin: 8px;
-  }
+  }*/
 
   /*.logo {
     width: 50%;
