@@ -34,7 +34,7 @@ export default class Main extends Component {
 
     const storedFavorites = localStorage.getItem('storedFavorites')
     const favArr = JSON.parse(storedFavorites)
-    console.log(favArr)
+    // console.log(favArr)
     this.setState({
       favorites: favArr ? favArr : [],
       favoritesCount: favArr.length

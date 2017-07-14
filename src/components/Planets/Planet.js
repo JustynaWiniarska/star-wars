@@ -27,7 +27,11 @@ const Planet = ({ name, terrain, population, climate, residents, handleFavorites
       <p>Terrain: {terrain}</p>
       <p>Population: {population}</p>
       <p>Climate: {climate}</p>
-      <p>Residents: {residents}</p>
+      <p>Residents: {residents.map((resident, i) => {
+        return(
+          <span key={i}>{resident}, </span>
+        )
+      })}</p>
     </div>
   )
 }

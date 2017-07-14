@@ -41,6 +41,7 @@ header {
 .favorites-btn:hover {
   background-color: rgba(153, 153, 153, .6);
   color: #252525;
+  cursor: pointer;
 }
 
 .favorites-btn:focus{
@@ -122,6 +123,7 @@ h3 {
 .fav-btn:hover {
   background-color: rgba(85, 168, 170, .2);
   outline: none;
+  cursor: pointer;
 }
 
 .fav-btn:active {
