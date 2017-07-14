@@ -1,9 +1,9 @@
 .main {
   width: 79%;
   border-left: .8px dotted #358a8d;
-  padding-left: 25px;
 }
 
+/*HEADER*/
 header {
   border-bottom: .8px dotted #358a8d;
   padding-bottom: 30px;
@@ -56,6 +56,8 @@ header {
   font-size: 16px
 }
 
+/*----------------------*/
+
 /*"Loading.... message"*/
 .loading {
   color: #999;
@@ -70,6 +72,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-around;
   min-height: 600px;
+  padding: 0 10px;
 }
 
 /*cards display*/
@@ -85,9 +88,9 @@ h2 {
   letter-spacing: .1em;
   background-color: rgba(53, 53, 53, .7);
   border: 1.5px solid #358a8d;
-  width: 290px;
-  min-height: 180px;
-  margin: 20px;
+  width: 280px;
+  min-height: 170px;
+  margin: 20px 8px;
 }
 
 h3 {
@@ -140,7 +143,6 @@ h3 {
 
   .main {
     width: 100%;
-    padding-right: 25px;
   }
 }
 
@@ -151,32 +153,74 @@ h3 {
   }
 
   .card {
-    margin: 20px 5px;
+    margin: 10px 5px;
   }
-  /*.card-grid {
-    margin-right: 20px;
-  }*/
+
+  .logo {
+    width: 40%;
+  }
 }
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 750px) {
 
-  /*.card {
-    margin: 20px 5px;
-  }*/
-
-  /*.favorites-btn{
-    margin: 8px;
-  }*/
-
-  /*.logo {
-    width: 50%;
-  }*/
+  .logo {
+    width: 45%;
+    padding-right: 35px;
+  }
 }
 
-@media screen and (max-width: 625px) {
+@media screen and (max-width: 730px) {
+
+  .main {
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    padding-bottom: 15px;
+  }
 
   .logo {
     padding-top: 60px;
     width: 50%;
+    padding: 60px 0 10px 0;
+  }
+
+  h2 {
+    margin: 13px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 605px) {
+
+  .main {
+    padding-bottom: 15px;
+  }
+
+  .logo {
+    width: 55%;
+  }
+
+  .favorites-btn {
+    margin: 6px;
+  }
+
+  h2 {
+    font-size: 25px;
+    padding-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  .card {
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .logo {
+    width: 65%;
+    padding: 56px 0 2px 0;
   }
 }
