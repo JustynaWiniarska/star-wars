@@ -67,6 +67,7 @@ header {
 .card-grid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   min-height: 600px;
 }
 
@@ -130,4 +131,20 @@ h3 {
 
 .fav-btn:focus {
   outline: none
+}
+
+
+@media screen and (max-width: 935px) {
+
+  .main {
+    width: 100%;
+    padding-right: 25px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+
+  .main {
+    padding: 10px;
+  }
 }
