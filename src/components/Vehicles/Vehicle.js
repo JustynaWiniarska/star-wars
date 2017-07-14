@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Vehicle = ({name, model, vehicle_class, passengers, handleFavorites }) => {
+const Vehicle = ({name, model, vehicle_class, passengers, handleFavorites, favorites }) => {
 
   const vehicleData = {
     name: name,
@@ -9,8 +9,12 @@ const Vehicle = ({name, model, vehicle_class, passengers, handleFavorites }) => 
     passengers: passengers
   }
 
+  const favoritesArray = favorites.map(obj => {
+    return obj.name
+  })
+
   return (
-    <div className='card'>
+    <div className={favoritesArray.includes(name) ? 'card favorited' : 'card'} >
       <div className='card-header'>
         <h3>{name}</h3>
         <button className='fav-btn'
