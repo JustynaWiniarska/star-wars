@@ -12,6 +12,9 @@ const toggleFavorites = (favorite, main) => {
     favoritesArray.splice(place, 1)
   }
 
+  const favsInState = JSON.stringify(main.state.favorites)
+  localStorage.setItem('storedFavorites', favsInState);
+
   main.setState({
     favorites: favoritesArray,
     favoritesCount: favoritesArray.length

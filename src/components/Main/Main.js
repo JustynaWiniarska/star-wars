@@ -31,6 +31,14 @@ export default class Main extends Component {
     callPeople('people', this)
     callPlanets('planets', this)
     callVehicles('vehicles', this)
+
+    const storedFavorites = localStorage.getItem('storedFavorites')
+    const favArr = JSON.parse(storedFavorites)
+    console.log(favArr)
+    this.setState({
+      favorites: favArr ? favArr : [],
+      favoritesCount: favArr.length
+    })
   }
 
   saveFavorite(favorite) {
