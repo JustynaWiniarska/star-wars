@@ -16,7 +16,7 @@
 #### Tablet:
 ![Tables layout](public/screenshots/iPad.jpg)
 
-#### Cell Phone:
+#### Mobile:
 ![Mobile layout](public/screenshots/cell.jpg)
 
 ### Code Sample:
