@@ -218,6 +218,12 @@ h3 {
   }
 }
 
+@media screen and (max-width: 420px) {
+  .card {
+    width: 93%;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .logo {
     width: 65%;

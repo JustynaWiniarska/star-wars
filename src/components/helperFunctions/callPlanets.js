@@ -16,7 +16,7 @@ const callPlanets = (page, main) => {
   // console.log('value:', value.name)
         return value.name
       })
-        .catch(error => console.log('error fetching residents in people:', error))
+        .catch(error => console.log('error fetching residents in planets:', error))
       )
 
 // console.log('residents', residents)
