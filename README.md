@@ -6,4 +6,4 @@
 * test asynchronous JavaScrip
 * develop skills in writing more complex React code
 
-* [Original Assignment](http://frontend.turing.io/projects/swapi-box.html)
+Original assignment: [Turing Project](http://frontend.turing.io/projects/swapi-box.html)
