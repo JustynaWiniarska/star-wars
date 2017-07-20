@@ -7,3 +7,7 @@
 * develop skills in writing more complex React code
 
 Original assignment: [Turing Project](http://frontend.turing.io/projects/swapi-box.html)
+
+
+#### Desktop layout:
+![Desktop layout](public/screenshots/desktop.jpg)
