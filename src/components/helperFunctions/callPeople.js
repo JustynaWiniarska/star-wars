@@ -30,6 +30,7 @@ const callPeople = (page, main) => {
 
   Promise.all(homeworld)
     .then(callback => {
+      // console.log('callback', callback)
       return callback.map((home, i) => {
         return Object.assign(data.results[i], {homeworld: home})
       })
@@ -54,8 +55,8 @@ const callPeople = (page, main) => {
       main.setState({people: value})
     })
 
-    .catch(error => console.log('error fetching people:', error))
   })
+  .catch(error => console.log('error fetching people:', error))
 }
 
 export default callPeople;

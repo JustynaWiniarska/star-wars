@@ -4,3 +4,7 @@
   letter-spacing: .2em;
   margin-top: 50px
 }
+
+.first-view {
+  min-height: 700px;
+}

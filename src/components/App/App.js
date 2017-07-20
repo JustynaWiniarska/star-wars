@@ -18,7 +18,7 @@ class App extends Component {
     fetch('http://swapi.co/api/films/1/')
     .then(res => res.json())
     .then(movie => {
-      // console.log(this.state.film)
+      console.log('stub', movie.opening_crawl)
       this.setState({film: cleanFilmData(movie)})
     })
     .catch(error => console.log('error fetching film:', error))

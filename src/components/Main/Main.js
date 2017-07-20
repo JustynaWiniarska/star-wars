@@ -32,10 +32,15 @@ export default class Main extends Component {
     callPlanets('planets', this)
     callVehicles('vehicles', this)
 
+    //LOCAL STORAGE:
     const storedFavorites = localStorage.getItem('storedFavorites')
     const favArr = JSON.parse(storedFavorites)
-    // console.log(favArr)
+
     this.setState({
+        // favorites: this.state.favorites,
+        // favoritesCount: this.state.favorites.length
+
+      //LOCAL STORAGE:
       favorites: favArr ? favArr : [],
       favoritesCount: favArr.length
     })
@@ -46,7 +51,7 @@ export default class Main extends Component {
   }
 
   render() {
-//rendering 3 times!!
+//rendering 3 times
     // console.log('planets state', this.state.planets)
     // console.log('people state', this.state.people)
     // console.log('vehicle state', this.state.vehicles)

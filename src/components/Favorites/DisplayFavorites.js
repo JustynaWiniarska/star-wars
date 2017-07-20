@@ -102,7 +102,7 @@ const DisplayFavorites = ({ favorites, handleFavorites }) => {
     }
 
     return (
-      <div>
+      <div className='first-view'>
         <h2>Favorites</h2>
         <div className='favorites-grid'>
           {FavoriteCards}

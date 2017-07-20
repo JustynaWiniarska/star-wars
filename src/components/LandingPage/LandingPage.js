@@ -4,7 +4,7 @@ import './LandingPage.css';
 const LandingPage = () => {
 
   return (
-    <div>
+    <div className='first-view'>
       <p className='landing-page'>Select a Category</p>
     </div>
   )
