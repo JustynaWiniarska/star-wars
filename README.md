@@ -11,7 +11,7 @@ Original assignment: [Turing Project](http://frontend.turing.io/projects/swapi-b
 
 
 #### Desktop layout:
-![Desktop layout](public/screenshots/desktop1.jpg)
+![Desktop layout](public/screenshots/desktop.jpg)
 
 #### Tablet:
 ![Tables layout](public/screenshots/iPad.jpg)
