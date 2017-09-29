@@ -1,5 +1,7 @@
 ## Star Wars API (SWapi Box)
 
+### Link to deployed application: [GitHub Pages](https://justynafield.github.io/star-wars/)
+
 #### The aim of this project was to learn and practice:
 * making asynchronous API calls, 
 * apply Promise.all, 
