@@ -1,6 +1,6 @@
 const callPlanets = (page, main) => {
 
-  fetch(`http://swapi.co/api/${page}/`)
+  fetch(`https://swapi.co/api/${page}/`)
   .then(res => res.json())
   .then(data => {
 

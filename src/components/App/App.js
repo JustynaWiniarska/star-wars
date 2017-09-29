@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   componentWillMount(){
-    fetch('http://swapi.co/api/films/1/')
+    fetch('https://swapi.co/api/films/1/')
     .then(res => res.json())
     .then(movie => {
       this.setState({film: cleanFilmData(movie)})
